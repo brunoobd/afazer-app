@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AFazer App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titulo_tarefa">Titulo da tarefa</string>
+    <string name="descricao_tarefa">Descricao da tarefa</string>
+    <string name="data_tarefa">Data para realização</string>
+    <string name="data_selecione_tarefa">Selecione a data</string>
+    <string name="salvar_tarefa">Salvar</string>
+</resources>
