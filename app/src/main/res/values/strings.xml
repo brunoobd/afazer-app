@@ -7,4 +7,5 @@
     <string name="data_tarefa">Data para realização</string>
     <string name="data_selecione_tarefa">Selecione a data</string>
     <string name="salvar_tarefa">Salvar</string>
+    <string name="vali_tarefa">* Obrigatório</string>
 </resources>
