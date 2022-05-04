@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cadTarefaFragment">
+    app:startDestination="@id/principalFragment">
 
     <fragment
         android:id="@+id/principalFragment"
@@ -34,6 +34,6 @@
     <fragment
         android:id="@+id/cadTarefaFragment"
         android:name="br.senai.sp.cotia.afazerapp.fragment.CadTarefaFragment"
-        android:label="fragment_cad_tarefa"
+        android:label="Adicione uma nova tarefa"
         tools:layout="@layout/fragment_cad_tarefa" />
 </navigation>

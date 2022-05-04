@@ -3,6 +3,8 @@ package br.senai.sp.cotia.afazerapp.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Calendar;
+
 import lombok.Data;
 // lombok que cria os getters and setters
 @Data
@@ -17,4 +19,12 @@ public class Tarefa {
     private long dataCriacao;
     private long dataPrevista;
     private long dataFinalizada;
+
+    public boolean isConcluida() {
+        return dataFinalizada != 0;
+    }
+
+    public boolean isAtrasada() {
+        return Calendar.getInstance().getTimeInMillis() > dataPrevista;
+    }
 }
