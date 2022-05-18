@@ -4,20 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.PrincipalFragment">
+    tools:context=".fragment.InicioFragment"
+    android:background="@drawable/bg_inicio">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTarefas"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_adicionarTarefa"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="20dp"
-        android:src="@android:drawable/ic_input_add"/>
+        android:layout_marginTop="100dp"
+        android:textSize="24sp"
+        android:text="Bem vindo ao app AFazer!"
+        android:textAlignment="center"
+        android:fontFamily="@font/lexend_deca"
+        android:textColor="@color/green"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

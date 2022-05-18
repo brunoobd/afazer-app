@@ -8,4 +8,7 @@
     <string name="data_selecione_tarefa">Selecione a data</string>
     <string name="salvar_tarefa">Salvar</string>
     <string name="vali_tarefa">* Obrigatório</string>
+    <string name="origem_imagem">Deseja ir para a camera ou para a galeria?</string>
+    <string name="camera">Câmera</string>
+    <string name="galeria">Galeria</string>
 </resources>

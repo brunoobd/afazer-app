@@ -1,6 +1,7 @@
 package br.senai.sp.cotia.afazerapp.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +21,14 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     private List<Tarefa> tarefas;
     // variavel para o Context
     private Context context;
+    // variavel pro listener
+    private OnTarefaCLickListener listenerTarefa;
 
     // construtor que recebe os parametros para o adapter
-    public TarefaAdapter(List<Tarefa> tarefas, Context context) {
+    public TarefaAdapter(List<Tarefa> tarefas, Context context, OnTarefaCLickListener listenerTarefa) {
         this.tarefas = tarefas;
         this.context = context;
+        this.listenerTarefa = listenerTarefa;
     }
 
     @NonNull
@@ -52,8 +56,13 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         } else if (t.isAtrasada()) {
             holder.vStatus.setBackgroundColor(context.getResources().getColor(R.color.red));
         } else {
+            // trocar para amarela quando aberta
             holder.vStatus.setBackgroundColor(context.getResources().getColor(R.color.white));
         }
+        // implementa o click na tarefa
+        holder.itemView.setOnClickListener(v -> {
+            listenerTarefa.onClick(v, t);
+        });
     }
 
     @Override
@@ -75,5 +84,10 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
             tvData = (TextView) view.findViewById(R.id.tv_data);
             vStatus = (View) view.findViewById(R.id.tv_status);
         }
+    }
+
+    // interface para o click na tarefa
+    public interface OnTarefaCLickListener {
+        void onClick(View view, Tarefa tarefa);
     }
 }

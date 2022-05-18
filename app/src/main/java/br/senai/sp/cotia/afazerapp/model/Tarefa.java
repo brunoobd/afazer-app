@@ -3,6 +3,7 @@ package br.senai.sp.cotia.afazerapp.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
 import lombok.Data;
@@ -10,7 +11,7 @@ import lombok.Data;
 @Data
 // anotação que indica para o bd que a classe é uma tabela
 @Entity
-public class Tarefa {
+public class Tarefa implements Serializable {
     // anotação para identificar o ID da nossa tabela, o autoGenarate é o auto increment
     @PrimaryKey(autoGenerate = true)
     private Long id;
